@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ai large — 产品设计说明</title>
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; }
+    h1, h2, h3 { color: #333; }
+    .section { margin-bottom: 40px; }
+    .code-block { background: #f4f4f4; padding: 15px; border-radius: 5px; font-family: monospace; white-space: pre-wrap; }
+    .tag { background: #e0f7fa; padding: 3px 6px; border-radius: 3px; font-size: 90%; }
+  </style>
+</head>
+<body>
+
+  <h1>Ai large — 产品功能与 UI 设计说明</h1>
+
+  <div class="section">
+    <h2>🌟 1. 产品概述</h2>
+    <p>
+      <strong>Ai large</strong> 是一个帮助用户“认识自己、爱自己、成长自己”的情绪价值日记应用。  
+      核心体验是：用户像发微博一样发布实时内心状态，同时 AI 自动回复提供情绪支持和思路引导。
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>📌 2. 核心功能设计</h2>
+
+    <h3>🔹 2.1 底部导航</h3>
+    <ul>
+      <li>Home — 今日推荐 & AI 建议</li>
+      <li>Feed — 情绪动态流（微博式）</li>
+      <li>Post — 发布情绪日志</li>
+      <li>Chat — AI 深度对话</li>
+      <li>Profile — 用户设置与成长记录</li>
+    </ul>
+
+    <h3>🔹 2.2 Feed（微博式动态流）</h3>
+    <p>
+      显示用户历史发布的情绪日志，每条日志含：
+    </p>
+    <ul>
+      <li>情绪标签 😊/😞/😌/🤯</li>
+      <li>文字/语音/图片内容</li>
+      <li>AI 自动情绪支持回复</li>
+      <li>点赞 / 收藏 / Chat with AI</li>
+    </ul>
+
+    <h3>🔹 2.3 发布界面（Post）</h3>
+    <ul>
+      <li>文本输入框</li>
+      <li>情绪标签选择</li>
+      <li>媒体上传（图片/语音）</li>
+      <li>隐私选择（私密 / 匿名圈子）</li>
+    </ul>
+
+    <h3>🔹 2.4 AI 聊天对话（Chat）</h3>
+    <p>展开 AI 回复，可进入对话模式：用户 ↔ AI 情绪引导。</p>
+
+    <h3>🔹 2.5 情绪趋势 & 洞察（Trends）</h3>
+    <ul>
+      <li>日/周/月 情绪统计趋势图</li>
+      <li>常见情绪词频分析</li>
+      <li>AI 基于趋势提出成长建议</li>
+    </ul>
+
+    <h3>🔹 2.6 用户中心（Profile）</h3>
+    <ul>
+      <li>统计：发布数量、情绪分布</li>
+      <li>主题切换（Light / Dark）</li>
+      <li>隐私与数据导出设置</li>
+    </ul>
+
+  </div>
+
+  <div class="section">
+    <h2>🎨 3. UI 设计 & 页面结构</h2>
+
+    <h3>📌 3.1 首页结构</h3>
+    <div class="code-block">
+Home Screen:
+- Daily emotional summary
+- Today’s suggested reflections (cards)
+- Quick actions
+    </div>
+
+    <h3>📌 3.2 Feed 页面</h3>
+    <div class="code-block">
+Feed Screen:
+For each post:
+Avatar, Timestamp, Emotion Tag
+Text content
+Optional media
+AI reply preview
+Buttons: Like / Save / Chat
+    </div>
+
+    <h3>📌 3.3 发布（Post）页面</h3>
+    <div class="code-block">
+Post Screen:
+Large text input
+Emotion tags selection
+Media upload
+Privacy: Private/Anonymous
+Publish button
+    </div>
+
+    <h3>📌 3.4 Chat 聊天页面</h3>
+    <div class="code-block">
+Chat Screen:
+List of messages
+User on right, AI on left
+Text input at bottom
+Quick actions (suggested prompts)
+    </div>
+
+    <h3>📌 3.5 Trends & Insights 页面</h3>
+    <div class="code-block">
+Trends Screen:
+Line chart (emotion over time)
+Frequency chart (tag usage)
+AI insights section
+    </div>
+
+    <h3>📌 3.6 Profile 页面</h3>
+    <div class="code-block">
+Profile Screen:
+User summary
+Stats (posts, emotions)
+Theme toggle
+Settings
+    </div>
+
+  </div>
+
+  <div class="section">
+    <h2>🧩 4. 组件结构表（用于 UI 实现）</h2>
+    <h3>📌 Buttons</h3>
+    <ul>
+      <li>Primary Button</li>
+      <li>Secondary Button</li>
+      <li>Text / Icon Button</li>
+    </ul>
+
+    <h3>📌 Inputs / Controls</h3>
+    <ul>
+      <li>Text Field</li>
+      <li>Emotion Tag Chips</li>
+      <li>Media Upload</li>
+      <li>Privacy Selector</li>
+    </ul>
+
+    <h3>📌 Cards</h3>
+    <ul>
+      <li>Feed Item Card</li>
+      <li>AI Reply Card</li>
+      <li>Trend Chart Card</li>
+    </ul>
+
+    <h3>📌 Chat UI</h3>
+    <ul>
+      <li>User Bubble</li>
+      <li>AI Bubble</li>
+      <li>Quick Action Buttons</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>🤖 5. Prompt for AI Studio</h2>
+    <p>
+      以下 Prompt 可直接复制到 <span class="tag">Google AI Studio Build</span> 或类似生成工具中，帮助直接产出原型。
+    </p>
+    <div class="code-block">
+Build Ai large:
+- Bottom nav: Home, Feed, Post, Chat, Profile
+- Feed: micro-blog posts with emotion tags, media & AI replies
+- Post: text + tags + media + privacy
+- Chat: AI in-depth emotion guidance
+- Trends: charts + insights
+- Profile: stats + settings
+Style: warm pastel UI, minimal mobile design
+Components: nav bar, feed cards, chat bubbles, charts
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>📌 6. 开发建议 & 输出结构</h2>
+    <ul>
+      <li>建议使用 React / Flutter 等跨平台框架</li>
+      <li>所有页面使用统一 Design System 组件</li>
+      <li>AI 模块通过 REST / gRPC 调用后端模型</li>
+      <li>Trend 图可用 Chart.js / D3 等库绘制</li>
+    </ul>
+  </div>
+
+  <footer>
+    <p>
+      📄 这是为 Ai large 应用生成的完整 HTML 说明文档。  
+      你可以进一步导出为 PDF / 提供给产品/开发团队使用。
+    </p>
+  </footer>
+
+</body>
+</html>
